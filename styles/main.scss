@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: league spartan;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1em 2em;
+  display: flex;
+  flex: 1;
+  background-color: steelblue;
+}
+.navi {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    flex-shrink: 1;
+
+    a{
+      color: hsl(0%, 0%, 100%);
+      text-decoration: none;
+    }
+  }
+
+  a {
+    color: hsl(0%, 0%, 100%);
+    margin-right: 3em;
+    text-decoration: none;
+    font-size: min
+  }
+}

@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: League spartan;
+  /* overflow-x: hidden; */
+}
+
+#close-icon {
+  display: none;
+}
+
+:root {
+  --link-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 63%);
+  --arrow-color: hsl(0, 0%, 27%);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+ul {
+  list-style: none;
+}
+
+.navs {
+  display: flex;
+  position: absolute;
+  width: min(29em, 50%);
+  justify-content: space-between;
+  margin-left: 5%;
+  height: 8vh;
+  align-items: flex-end;
+}
+
+
+.main-logo {
+  width: 35%;
+  font-size: min(120%, 1.1rem);
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.links li {
+  margin: 0 auto;
+}
+
+.links a {
+  position: relative;
+}
+
+.links a::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  bottom: -30%;
+  transition: background 0.5s ease;
+}
+
+.links a:hover::before{
+  background-color: white;
+}
+
+
+
+.grid-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  overflow: hidden;
+}
+
+.div1 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.hero-text {
+  position: relative;
+  display: flex;
+}
+
+.text {
+  place-items: center;
+  margin: auto;
+  width: min(25em, 80%);
+}
+
+.hero-text h1 {
+  font-size: 180%;
+}
+
+.hero-text p {
+  color: var(--text-color);
+  margin: 1em 0;
+}
+
+.hero-text h4 {
+  font-size: min(1.2rem, 150%);
+  word-spacing: .6em;
+  letter-spacing: .5em;
+}
+
+.navigator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  background-color: hsl(0, 0%, 0%);
+  width: 29%;
+  height: 10vh;
+}
+
+.left-arrow, .right-arrow {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  background-color: var(--arrow-color);
+}
+
+
+.div2 {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+
+.hero-image {
+  background-image: url(../images/desktop-image-hero-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.first-cont {
+  background: url(../images/image-about-dark.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.second-cont {
+  display: flex;
+}
+
+.second-cont h1 {
+  font-size: .9rem;
+  word-spacing: .4rem;
+  letter-spacing: .2rem;
+}
+
+.second-cont p {
+  margin: 1em 0;
+  font-size: min(.9rem, 120%);
+}
+
+.footer-text {
+  margin: auto;
+  width: min(35em, 80%);
+}
+
+
+
+.third-cont {
+  background: url(../images/image-about-light.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.footer-text p {
+  color: var(--text-color);
+}
+
+.hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 680px) {
+  * {
+    overflow-x: hidden;
+  }
+  .navs .links {
+    display: none;
+  }
+
+  .grid-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.1fr;
+    height: 150vh;
+  }
+  .div1 {
+    height: 80vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.1fr;
+  }
+
+  .div2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 2fr 1.5fr;
+    height: 70vh;
+  }
+
+  .left-arrow, .right-arrow  {
+    /* display: none; */
+  }
+
+  .hero-text {
+    position: unset;
+  }
+  .links a {
+    position: unset;
+  }
+  .navigator {
+    top: 0;
+    margin-top: 60%;
+
+    margin-left: 70%;
+  }
+
+
+  .hamburger {
+    display: flex;
+    /* margin-left: 2em; */
+  }
+
+  .navs {
+    /* margin: 0 20%; */
+    padding: 0 10%;
+    width: 100%;
+  }
+  /* .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  } */
+  .links {
+    animation: nav-animation .5s;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    left: 0;
+    height: 4em;
+    align-items: center;
+    padding-right: 2%;
+  }
+  #anchors {
+    color: black;
+  }
+  #close-icon {
+    display: flex;
+  }
+
+  .links a::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: -30%;
+    transition: background 0.5s ease;
+  }
+  
+  .links a:hover::before{
+    background-color: white;
+  }
+  
+}
+
+ @keyframes nav-animation {
+  0% {
+    height: 0em;
+  }
+  100% {
+    height: 4em;
+  }
+} 
+
+
